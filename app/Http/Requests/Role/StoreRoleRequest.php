@@ -30,7 +30,6 @@ class StoreRoleRequest extends FormRequest
             'title' => [
                 'required', 'string', 'max:255',
             ],
-            // add validation for role this here
         ];
     }
 }

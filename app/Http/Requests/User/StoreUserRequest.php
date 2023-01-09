@@ -37,7 +37,6 @@ class StoreUserRequest extends FormRequest
             'password' => [
                 'min:8', 'string', 'max:255', 'mixedCase',
             ],
-            // add validation for role this here
         ];
     }
 }

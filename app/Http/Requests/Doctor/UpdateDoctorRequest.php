@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Doctor;
 
-use App\Models\ManagementAccess\Role;
+use App\Models\Operational\Doctor;
 // use Illuminate\Auth\Access\Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,7 +39,6 @@ class UpdateDoctorRequest extends FormRequest
             'photo' => [
                 'nullable', 'string', 'max:10000',
             ],
-            // add validation for role this here
         ];
     }
 }

@@ -39,7 +39,6 @@ class StoreDoctorRequest extends FormRequest
             'photo' => [
                 'nullable', 'string', 'max:10000',
             ],
-            // add validation for role this here
         ];
     }
 }
