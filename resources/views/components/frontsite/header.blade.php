@@ -50,9 +50,9 @@
                         <span class="sr-only">Open main menu</span>
 
                         <!--
-                                    Icon when menu is closed.
-                                    Menu open: "hidden", Menu closed: "block"
-                                -->
+                                            Icon when menu is closed.
+                                            Menu open: "hidden", Menu closed: "block"
+                                        -->
                         <svg x-show="!navbarMobileOpen" class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -60,9 +60,9 @@
                         </svg>
 
                         <!--
-                                    Icon when menu is open.
-                                    Menu open: "block", Menu closed: "hidden"
-                                -->
+                                            Icon when menu is open.
+                                            Menu open: "block", Menu closed: "hidden"
+                                        -->
                         <svg x-show="navbarMobileOpen" class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -103,10 +103,11 @@
                             x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                             class="origin-top-right absolute z-30 right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                            <a href="{{ route('backsite.dashboard.index') }}"
+                                class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100" role="menuitem"
+                                tabindex="-1" id="user-menu-item-0">Dashboard</a>
                             <a href="#" class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
-                                role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
-                                role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                                role="menuitem" tabindex="-1" id="user-menu-item-1">Your Profile</a>
                             <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                 class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100" role="menuitem"
@@ -129,9 +130,9 @@
                         <span class="sr-only">Open main menu</span>
 
                         <!--
-                                    Icon when menu is closed.
-                                    Menu open: "hidden", Menu closed: "block"
-                                    -->
+                                            Icon when menu is closed.
+                                            Menu open: "hidden", Menu closed: "block"
+                                            -->
                         <svg x-show="!navbarMobileOpen" class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -139,9 +140,9 @@
                         </svg>
 
                         <!--
-                                    Icon when menu is open.
-                                    Menu open: "block", Menu closed: "hidden"
-                                    -->
+                                            Icon when menu is open.
+                                            Menu open: "block", Menu closed: "hidden"
+                                            -->
                         <svg x-show="navbarMobileOpen" class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
