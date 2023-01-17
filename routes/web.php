@@ -9,9 +9,13 @@ use App\Http\Controllers\Frontsite\PaymentController;
 
 // backsite
 use App\Http\Controllers\Backsite\DashboardController;
+use App\Http\Controllers\Backsite\PermissionController;
+use App\Http\Controllers\Backsite\RoleController;
+use App\Http\Controllers\Backsite\UserController;
 use App\Http\Controllers\Backsite\SpecialistController;
 use App\Http\Controllers\Backsite\TypeUserController;
 use App\Http\Controllers\Backsite\ConsultationController;
+use App\Http\Controllers\Backsite\DoctorController;
 use App\Http\Controllers\Backsite\ConfigPaymentController;
 use App\Http\Controllers\Backsite\ReportAppointmentController;
 use App\Http\Controllers\Backsite\ReportTransactionController;
@@ -41,6 +45,15 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
     // dashboard
     Route::resource('dashboard', DashboardController::class);
 
+    // permission
+    Route::resource('permission', PermissionController::class);
+
+    // role
+    Route::resource('role', RoleController::class);
+
+    // user
+    Route::resource('user', UserController::class);
+
     // type user
     Route::resource('type_user', TypeUserController::class);
 
@@ -52,6 +65,9 @@ Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['aut
 
     // consultation
     Route::resource('consultation', ConsultationController::class);
+
+    // doctor
+    Route::resource('doctor', DoctorController::class);
 
     // report appointment
     Route::resource('appointment', ReportAppointmentController::class);
