@@ -43,7 +43,7 @@ class ConfigPaymentController extends Controller
 
         $config_payment = ConfigPayment::all();
 
-        return view('pages.backsite.master-data.config-payment.index', compact($config_payment));
+        return view('pages.backsite.master-data.config-payment.index', compact('config_payment'));
     }
 
     /**
