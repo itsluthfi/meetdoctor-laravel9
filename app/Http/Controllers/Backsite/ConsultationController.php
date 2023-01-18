@@ -13,7 +13,7 @@ use App\Http\Requests\Consultation\StoreConsultationRequest;
 use App\Http\Requests\Consultation\UpdateConsultationRequest;
 
 // use everything here
-// use Gate;
+use Gate;
 use Auth;
 
 // use model here
@@ -41,6 +41,8 @@ class ConsultationController extends Controller
      */
     public function index()
     {
+        abort_if(Gate::denies('consultation_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         $consultation = Consultation::orderBy('created_at', 'desc')->get();
 
         return view('pages.backsite.master-data.consultation.index', compact('consultation'));
@@ -93,6 +95,8 @@ class ConsultationController extends Controller
      */
     public function edit(Consultation $consultation)
     {
+        abort_if(Gate::denies('consultation_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         return view('pages.backsite.master-data.consultation.edit', compact('consultation'));
     }
 
