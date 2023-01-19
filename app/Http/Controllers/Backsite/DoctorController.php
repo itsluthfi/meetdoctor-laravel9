@@ -76,6 +76,10 @@ class DoctorController extends Controller
         // get all request from frontsite
         $data = $request->all();
 
+        // re format before push to table
+        $data['fee'] = str_replace(',', '', $data['fee']);
+        $data['fee'] = str_replace('IDR ', '', $data['fee']);
+
         // upload process here
         // do not forget php artisan storage:link to create shortcut so blade can access the photo
         $path = public_path('app/public/assets/file-doctor');
@@ -140,6 +144,10 @@ class DoctorController extends Controller
     {
         // get all request from frontsite
         $data = $request->all();
+
+        // re format before push to table
+        $data['fee'] = str_replace(',', '', $data['fee']);
+        $data['fee'] = str_replace('IDR ', '', $data['fee']);
 
         // re format before push to table
         $data['fee'] = str_replace(',', '', $data['fee']);

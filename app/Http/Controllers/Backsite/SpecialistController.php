@@ -68,6 +68,10 @@ class SpecialistController extends Controller
         // get all request from frontsite
         $data = $request->all();
 
+        // re format before push to table
+        $data['price'] = str_replace(',', '', $data['price']);
+        $data['price'] = str_replace('IDR ', '', $data['price']);
+
         // store to database
         $specialist = Specialist::create($data);
 
@@ -112,6 +116,10 @@ class SpecialistController extends Controller
     {
         // get all request from frontsite
         $data = $request->all();
+
+        // re format before push to table
+        $data['price'] = str_replace(',', '', $data['price']);
+        $data['price'] = str_replace('IDR ', '', $data['price']);
 
         // update to database
         $specialist->update($data);
