@@ -20,6 +20,7 @@ use App\Http\Controllers\Backsite\HospitalPatientController;
 use App\Http\Controllers\Backsite\ConfigPaymentController;
 use App\Http\Controllers\Backsite\ReportAppointmentController;
 use App\Http\Controllers\Backsite\ReportTransactionController;
+use App\Http\Controllers\Frontsite\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,9 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('payment/appointment/{id}', [PaymentController::class, 'payment'])
         ->name('payment.appointment');
     Route::resource('payment', PaymentController::class);
+
+    // register success page
+    Route::resource('register_success', RegisterController::class);
 });
 
 Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['auth:sanctum', 'verified']], function () {
