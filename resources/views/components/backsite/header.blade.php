@@ -104,7 +104,7 @@
                             href="#" data-toggle="dropdown"><span
                                 class="mr-1 user-name text-bold-700">{{ Auth::user()->name }}</span><span
                                 class="avatar avatar-online"><img
-                                    src="{{ asset('/assets/backsite/app-assets/images/portrait/small/avatar-s-19.png') }}"
+                                    src="{{ asset('/assets/frontsite/images/authenticated-user.svg') }}"
                                     alt="avatar"><i></i></span></a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
                                 href="user-profile.html"><i class="ft-user"></i> Edit Profile</a>
